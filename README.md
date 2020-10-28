@@ -13,7 +13,7 @@ Daftar branch untuk masing-masing Lab.
 - [Lab 10: Style Height & Width (Flex Dimensions)](https://github.com/Abdurraziq/pengenalan-react-native/tree/Lab-10)
 - [Lab 11: Responsive Design](https://github.com/Abdurraziq/pengenalan-react-native/tree/Lab-11)
 - [Lab 12: Tugas Membuat Style](https://github.com/Abdurraziq/pengenalan-react-native/tree/Lab-12_Tugas-membuat-style-)
-- [Lab 13: Tugas Membuat Halaman Login](https://github.com/Abdurraziq/pengenalan-react-native/tree/13)
+- [Lab 13: Tugas Membuat Halaman Login](https://github.com/Abdurraziq/pengenalan-react-native/tree/Lab-13_Membuat-Halaman-Login)
 - [Lab 14: React Navigation](https://github.com/Abdurraziq/pengenalan-react-native/tree/Lab-14)
 - [Lab 15: Tugas React Navigation](https://github.com/Abdurraziq/pengenalan-react-native/tree/Lab-15_Tugas-3)
 
