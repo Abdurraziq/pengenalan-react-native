@@ -71,7 +71,7 @@ const HomeScreen = ({ navigation }) => {
 
 Sama seperti halaman `HomeScreen`, halaman `DetailScreen` juga memiliki sebuah komponen parent berupa `View` yang diatur *style*-nya dengan `flex=1` (memenuhi seluruh ukuran layar) dan orientasi komponen *child*-nya ketengah-tengah layar. Didalam komponen `View` tersebut terdapat lima komponen lainnya yaitu;
 
-1. `Text` yang menampilkan teks **Home Screen**.
+1. `Text` yang menampilkan teks **Details Screen**.
 2. `Button` yang jika ditekan maka akan membuka halaman Detail kembali.
 3. `Button` yang jika ditekan maka akan membuka halaman Home.
 4. `Button` yang jika ditekan maka akan kembali ke halaman sebelumnya.
@@ -121,3 +121,12 @@ export default App;
 ### Halamn Detail
 
 ![Screenhoot](docs/img/screencapture2.png)
+
+## Sumber
+
+1. [react](https://www.npmjs.com/package/react)
+2. [createStackNavigator](https://reactnavigation.org/docs/stack-navigator/)
+3. [NavigationContainer](https://reactnavigation.org/docs/navigation-container/)
+4. [@react-navigation/stack](https://www.npmjs.com/package/@react-navigation/stack)
+5. [@react-navigation/native](https://www.npmjs.com/package/@react-navigation/native)
+6. [react-native](https://www.npmjs.com/package/react-native)
