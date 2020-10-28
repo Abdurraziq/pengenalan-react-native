@@ -1,21 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { Button, Text, View } from "react-native";
 
-export default function App() {
+const Kucing = (props) => {
+  const [lapar, setLapar] = useState(true);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Text>
+        Nama Saya {props.nama}, dan saya {lapar ? "LAPAR" : "KENYANG"} !
+      </Text>
+      <Button
+        onPress={() => {
+          setLapar(false);
+        }}
+        disabled={!lapar}
+        title={lapar ? "Beri Saya Ikan" : "Terima Kasih"}
+      />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Cafe = () => {
+  return (
+    <>
+      <Kucing nama="Kitty" />
+      <Kucing nama="Meong" />
+    </>
+  );
+};
+
+
+export default Cafe;
