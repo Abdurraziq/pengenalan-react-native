@@ -9,14 +9,16 @@ const App = (props) => {
 
   return (
     <View style={styles.container}>
-      <Text>Siapa nama Kamu?</Text>
-      <TextInput
-        placeholder="Ketikkan Nama"
-        style={{ width: 200, borderWidth: 1 }}
-        onChangeText={(text) => setNama(text)}
-      />
-      <Text>Nama kamu: {nama}</Text>
-      <Button title="Submit" onPress={tampilAlert} />
+      <View style={styles.komponen}>
+        <Text>Siapa nama Kamu?</Text>
+        <TextInput
+          placeholder="Ketikkan Nama"
+          style={styles.tombol}
+          onChangeText={(text) => setNama(text)}
+        />
+        <Text>Nama kamu: {nama}</Text>
+        <Button title="Submit" onPress={tampilAlert} />
+      </View>
     </View>
   );
 };
@@ -34,6 +36,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
     alignSelf: "stretch",
   },
+  tombol: {
+    height: 30,
+    borderWidth: 1
+  }
 });
 
 export default App;
