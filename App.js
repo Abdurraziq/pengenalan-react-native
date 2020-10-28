@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native";
+import { StyleSheet, Button, Text, View } from 'react-native';
 
 const Kucing = (props) => {
   const [lapar, setLapar] = useState(true);
 
   return (
-    <View>
+    <View style={styles.kucing}>
       <Text>
         Nama Saya {props.nama}, dan saya {lapar ? "LAPAR" : "KENYANG"} !
       </Text>
@@ -22,12 +22,27 @@ const Kucing = (props) => {
 
 const Cafe = () => {
   return (
-    <>
+    <View style={styles.container}>
       <Kucing nama="Kitty" />
       <Kucing nama="Meong" />
-    </>
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16
+  },
+  kucing: {
+    marginVertical: 16, 
+    textAlign: 'center',
+    alignSelf: 'stretch',
+  }
+});
 
 
 export default Cafe;
