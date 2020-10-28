@@ -15,50 +15,30 @@ import {
 
 const App = () => {
   return (
-    <View style={styles.viewContainer}>
-      <View style={styles.viewWrapper}>
-        <Text style={styles.textTitle}>Selamat Datang</Text>
-        <Text style={styles.textTitle}>Di</Text>
-        <Text style={styles.textTitle}>React Native</Text>
-      </View>
-      <TouchableOpacity>
-        <View style={styles.viewButton}>
-          <Text style={styles.textButton}>Submit</Text>
-        </View>
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <Text style={styles.bold}>Hell I am Bold</Text>
+      <Text style={styles.italic}>Hell I am Italic</Text>
+      <Text style={styles.underline}>Hell I am Underline</Text>
+      <Text style={styles.big}>Hell I am Big</Text>
+      <Text style={[styles.big, styles.blue]}>
+        Hell I am Big and Have Color
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  viewContainer: {
+  container: {
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "center",
-  },
-  viewButton: {
-    width: responsiveWidth(90),
-    height: responsiveHeight(7),
-    alignItems: "center",
-    backgroundColor: "#43b2ec",
-    justifyContent: "center",
-    alignSelf: "center",
-    borderRadius: 10,
-    marginTop: responsiveHeight(1.1),
-  },
-  textButton: {
-    fontWeight: "bold",
-    color: "#fff",
-    fontSize: responsiveFontSize(2.2),
-  },
-  viewWrapper: {
     alignItems: "center",
   },
-  textTitle: {
-    fontSize: responsiveFontSize(2.2),
-    fontWeight: "bold",
-    color: "#43b2ec",
-  },
+  bold: { fontWeight: "bold" },
+  italic: { fontStyle: "italic" },
+  underline: { textDecorationLine: "underline" },
+  big: { fontSize: responsiveFontSize(3), fontWeight: 600 },
+  blue: { color: "blue" },
 });
 
 export default App;
