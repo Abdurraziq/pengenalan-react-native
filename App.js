@@ -3,24 +3,12 @@ import { StyleSheet, Text, View } from "react-native";
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.texTitle}>Selamat Datang</Text>
-      <Text style={styles.texTitle}>Di</Text>
-      <Text style={styles.texTitle}>Aplikasi ABC</Text>
+    <View>
+      <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+      <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
+      <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#ebebeb',
-    alignItems: 'center'
-  },
-  texTitle:{
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#43b2ec'
-  },
-});
 
 export default App;
