@@ -1,30 +1,22 @@
 import React, { useState } from "react";
-import { StyleSheet, Button, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, TextInput, View } from "react-native";
 
-const Kucing = (props) => {
-  const [lapar, setLapar] = useState(true);
+const App = (props) => {
+  const [nama, setNama] = useState("");
+  const tampilAlert = () => {
+    alert("Nama kamu = " + nama);
+  };
 
-  return (
-    <View style={styles.kucing}>
-      <Text>
-        Nama Saya {props.nama}, dan saya {lapar ? "LAPAR" : "KENYANG"} !
-      </Text>
-      <Button
-        onPress={() => {
-          setLapar(false);
-        }}
-        disabled={!lapar}
-        title={lapar ? "Beri Saya Ikan" : "Terima Kasih"}
-      />
-    </View>
-  );
-};
-
-const Cafe = () => {
   return (
     <View style={styles.container}>
-      <Kucing nama="Kitty" />
-      <Kucing nama="Meong" />
+      <Text>Siapa nama Kamu?</Text>
+      <TextInput
+        placeholder="Ketikkan Nama"
+        style={{ width: 200, borderWidth: 1 }}
+        onChangeText={(text) => setNama(text)}
+      />
+      <Text>Nama kamu: {nama}</Text>
+      <Button title="Submit" onPress={tampilAlert} />
     </View>
   );
 };
@@ -32,17 +24,16 @@ const Cafe = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 16
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 16,
   },
-  kucing: {
-    marginVertical: 16, 
-    textAlign: 'center',
-    alignSelf: 'stretch',
-  }
+  komponen: {
+    marginVertical: 16,
+    textAlign: "center",
+    alignSelf: "stretch",
+  },
 });
 
-
-export default Cafe;
+export default App;
