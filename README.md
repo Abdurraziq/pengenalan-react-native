@@ -112,7 +112,7 @@ const App = () => {
 export default App;
 ```
 
-## Hssil
+## Hasil
 
 ### Halaman Home
 
